@@ -1,0 +1,14 @@
+snippet lap "if laptop" b
+{{ if eq .chezmoi.fullHostname "x1-carbon" }}
+{{ end }}
+endsnippet
+
+snippet nz "if nzxt" b
+{{ if eq .chezmoi.fullHostname "nzxt" }}
+{{ end }}
+endsnippet
+
+snippet nro "if not root" b
+{{ if not (eq .chezmoi.username "root") }}
+{{ end }}
+endsnippet
