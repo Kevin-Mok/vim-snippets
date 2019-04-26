@@ -106,7 +106,7 @@ snippet body "<body>"
 endsnippet
 
 snippet br "<br>" w
-<br>$1</br>
+<br>
 endsnippet
 
 snippet button "<button>"
@@ -121,7 +121,7 @@ snippet cite "<cite>" w
 <cite>$1</cite>
 endsnippet
 
-snippet class "class global attribute"
+snippet cls "class global attribute"
 class="$1"
 endsnippet
 
@@ -421,6 +421,10 @@ snippet scriptsrc "HTML <script src...>" w
 <script src="$1" charset="${3:utf-8}"></script>
 endsnippet
 
+snippet livejs "livejs" b
+<script src="http://livejs.com/live.js" charset="utf-8"></script>
+endsnippet
+
 snippet select "Select Box" w
 <select name="${1:some_name}" id="${2:$1}"${3:${4: multiple}${5: size="${6:1}"}}>
 	${0:${VISUAL}}
@@ -525,6 +529,27 @@ endsnippet
 
 snippet wbr "<wbr>" w
 <wbr>$1</wbr>
+endsnippet
+
+# hugo
+snippet { "liquid tags" i
+{{ $1 }
+endsnippet
+
+snippet block "block" b
+{{ block "$1" . }}
+{{ end }}
+endsnippet
+
+snippet def "define" b
+{{ define "$1" }}
+
+
+{{ end }}
+endsnippet
+
+snippet prt "partial" b
+{{ partial "$1" . }}
 endsnippet
 
 # vim:ft=snippets:

@@ -1,4 +1,4 @@
 *.pyc
 *~
-*.swo
-*.swp
+*.txt
+*.sw*

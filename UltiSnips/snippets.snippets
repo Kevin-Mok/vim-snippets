@@ -2,7 +2,7 @@ priority -50
 
 # We use a little hack so that the snippet is expanded
 # and parsed correctly
-snippet usnip "Ultisnips snippet definition" b
+snippet snp "Ultisnips snippet definition" b
 `!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:b}
 ${0:${VISUAL}}
 `!p snip.rv = "endsnippet"`
@@ -19,3 +19,13 @@ snippet vis "${VISUAL}" i
 endsnippet
 
 # vim:ft=snippets:
+
+snippet ts "Tabstop" i
+${${1:number}:${2:default}}$0
+endsnippet
+
+snippet "b(egin)?" "begin{} / end{}" br
+\begin{${1:something}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet

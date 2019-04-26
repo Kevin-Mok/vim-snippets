@@ -29,6 +29,10 @@ snippet #!
 `!p snip.rv = '#!/bin/' + getShell() + "\n\n" `
 endsnippet
 
+snippet #!f
+`!p snip.rv = '#!/usr/bin/fish' + "\n\n" `
+endsnippet
+
 snippet !env "#!/usr/bin/env (!env)"
 `!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n\n" `
 endsnippet
@@ -96,4 +100,7 @@ while ${2:[[ ${1:condition} ]]}; do
 done
 endsnippet
 
+snippet vr "var" w
+"\$${1:var_name}"
+endsnippet
 # vim:ft=snippets:

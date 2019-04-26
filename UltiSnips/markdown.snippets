@@ -25,17 +25,17 @@ endglobal
 ###########################
 # Sections and Paragraphs #
 ###########################
-snippet sec "Section" b
+snippet h1 "Section" b
 # ${1:Section Name} #
 $0
 endsnippet
 
-snippet ssec "Sub Section" b
+snippet h2 "Sub Section" b
 ## ${1:Section Name} ##
 $0
 endsnippet
 
-snippet sssec "SubSub Section" b
+snippet h3 "SubSub Section" b
 ### ${1:Section Name} ###
 $0
 endsnippet
@@ -70,8 +70,8 @@ endsnippet
 ################
 # Common stuff #
 ################
-snippet link "Link to something"
-[${1:${VISUAL:Text}}](${3:http://${2:www.url.com}})$0
+snippet lnk "Link to something"
+[${1:${VISUAL:text}}](${2:url})$0
 endsnippet
 
 snippet img "Image"

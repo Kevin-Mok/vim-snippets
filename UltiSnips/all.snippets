@@ -1,3 +1,5 @@
+# vim:ft=snippets:
+# Honza {{{ #
 # This file contains snippets that are always defined. I personally
 # have snippets for signatures and often needed texts
 
@@ -96,8 +98,11 @@ snippet datetime "YYYY-MM-DD hh:mm" w
 `!v strftime("%Y-%m-%d %H:%M")`
 endsnippet
 
-snippet todo "TODO comment" bw
-`!p snip.rv=get_comment_format()[0]` ${2:TODO}: $0${3: <${4:`!v strftime('%d-%m-%y')`}${5:, `!v g:snips_author`}>} `!p snip.rv=get_comment_format()[2]`
+# snippet todo "TODO comment" bw
+# `!p snip.rv=get_comment_format()[0]` ${2:TODO}: $0${3: <${4:`!v strftime('%d-%m-%y')`}${5:, `!v g:snips_author`}>} `!p snip.rv=get_comment_format()[2]`
+# endsnippet
+snippet td "TODO comment" bw
+`!p snip.rv=get_comment_format()[0]` TODO: $0 `!p snip.rv=get_comment_format()[2]`
 endsnippet
 
 ##########
@@ -107,4 +112,44 @@ snippet uuid "Random UUID" w
 `!p if not snip.c: import uuid; snip.rv = uuid.uuid4()`
 endsnippet
 
-# vim:ft=snippets:
+# }}} Honza #
+
+# Custom {{{ #
+snippet ltx "LaTeX" i
+LaTeX
+endsnippet
+
+snippet als "Custom alias"
+alias ${1:name}="${2:cmd}"
+endsnippet
+
+snippet 1lf "One-line function"
+function ${1:name}() { ${2:cmd} ; } 
+endsnippet
+
+snippet mlf "Multi-line function"
+function ${1:name}() { 
+	${2:cmd} 
+} 
+endsnippet
+
+snippet evr "Var with escaped quotes" w
+\"$${1:var}\"
+endsnippet
+
+snippet vr "Var with quotes" w
+"$${1:var}"
+endsnippet
+
+snippet kbd "For SE keys" i
+<kbd>$1</kbd>$0
+endsnippet
+
+snippet sfp "Shell fold pair" b
+# ${1:descr} {{{
+# $1 }}}
+endsnippet
+
+snippet fm "marker foldmethod" b
+`!p snip.rv = get_comment_format()[0]`vim: fdm=marker
+endsnippet

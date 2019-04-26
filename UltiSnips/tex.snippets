@@ -1,3 +1,4 @@
+# vim:ft=snippets:
 priority -50
 
 extends texmath
@@ -220,4 +221,69 @@ ${2:${VISUAL:code}}
 
 $0
 endsnippet
-# vim:ft=snippets:
+
+# Custom {{{ #
+snippet bf "Boldface" i
+\textbf{$1} $2
+endsnippet
+
+snippet sup "Superscript" i
+${1:var}^{${2:sub}} $0
+endsnippet
+
+snippet sub "Subscript" i
+${1:var}_{${2:sub}} $0
+endsnippet
+
+snippet aprx "approximate" i
+approximate 
+endsnippet
+
+snippet vsp "vspace" b
+\vspace{0.$1in}
+endsnippet
+
+snippet ul "Underline" i
+\underline{$1} $0
+endsnippet
+
+snippet pg "Pagebreak" b
+\pagebreak
+$0
+endsnippet
+
+snippet itl "Italics" i
+\textit{$1} $0
+endsnippet
+
+snippet href "href" i
+\href{${2:url}}{${1:label}}
+endsnippet
+
+snippet nwcmd "newcommand" b
+\newcommand{\\${1:cmd name}}[${2:num args}]{${3:cmd}}
+endsnippet
+
+snippet ld "ldots" i
+\ldots 
+endsnippet
+
+snippet qt "quotes" i
+\`\`$1"
+endsnippet
+
+snippet ct "cite" i
+(\cite[$1]{$2})
+endsnippet
+
+snippet ck "cite (Kuhn)" i
+(\cite[$1]{kuhn62})
+endsnippet
+
+snippet dispq "displayquote" b
+\begin{displayquote}
+$1
+\end{displayquote}
+endsnippet
+
+# }}} Custom #

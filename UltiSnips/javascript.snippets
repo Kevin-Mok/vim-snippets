@@ -62,10 +62,13 @@ function ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2:
 }
 endsnippet
 
-snippet vf "function (assigned to var)"
-${1:var }${2:function_name} = function $2`!p snip.rv = space_before_function_paren(snip)`($3) {
-	${VISUAL}$0
-}`!p snip.rv = semi(snip)`
+# snippet vf "function (assigned to var)"
+# ${1:var }${2:function_name} = function $2`!p snip.rv = space_before_function_paren(snip)`($3) {
+	# ${VISUAL}$0
+# }`!p snip.rv = semi(snip)`
+# endsnippet
+snippet vf "Function assigned to var"
+const $1 = $2 => { $3 }
 endsnippet
 
 # Drop priority so this only triggers when not beginning of line.
@@ -77,7 +80,7 @@ function`!p snip.rv = space_before_function_paren(snip)`($1) {
 endsnippet
 priority -50
 
-snippet anf "function (anonymous)" i
+snippet af "function (anonymous)" i
 function`!p snip.rv = space_before_function_paren(snip)`($1) {
 	${VISUAL}$0
 }
@@ -123,6 +126,18 @@ if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
 }
 endsnippet
 
+snippet elif "else if" w
+else if ($1) {
+	$2
+}
+endsnippet
+
+snippet else "else" w
+else {
+	$1
+}
+endsnippet
+
 snippet switch
 switch`!p snip.rv = keyword_spacing(snip)`(${VISUAL}${1:expression}) {
 	case '${VISUAL}${3:case}':
@@ -152,6 +167,94 @@ endsnippet
 
 snippet us
 'use strict'`!p snip.rv = semi(snip)`
+endsnippet
+
+snippet for "for" b
+for (let i = 0; i < $1; i++) {
+	
+}
+endsnippet
+
+snippet lg "console.log const" w
+log($1)
+endsnippet
+
+snippet dq "document.querySelector" w
+document.querySelector('$1')
+endsnippet
+
+snippet dce "document.createElement" w
+document.createElement('$1')
+endsnippet
+
+snippet cst "const" b
+const $1 = 
+endsnippet
+
+snippet tc "target class" w
+e.target.classList.contains('$1')
+endsnippet
+
+snippet clg "console.log" b
+console.log($1)
+endsnippet
+
+snippet ac "appendChild" b
+$1.appendChild($2)
+endsnippet
+
+snippet trn "Ternary operator" w
+($2 ${1:==} $3) ? $4 : $5
+endsnippet
+
+snippet an "anon function" w
+${1:()} => { $2 }
+endsnippet
+
+snippet anl "anon function (log)" w
+${1:()} => { log($1) }
+endsnippet
+
+snippet objf "object function" w
+Object.$1($2)
+endsnippet
+
+snippet mrgd "merge dicts" w
+Object.assign({}, $1, $2)
+endsnippet
+
+snippet map "map" w
+$1.map($2 => { $3 })
+endsnippet
+
+snippet tv "template var" i
+${$1}
+endsnippet
+
+snippet fore "forEach" i
+$1.forEach($2 => {
+  $3
+})
+endsnippet
+
+snippet fetch "fetch" b
+fetch(create${1:Get}Request('$2'))
+  .then($3)
+  .catch(logErrorFromFetch)
+endsnippet
+
+snippet then "then" i
+.then($1)
+endsnippet
+
+snippet promn "promise" w
+new Promise((resolve, reject) => {
+  $1
+})
+endsnippet
+
+snippet promr "promise.resolve" w
+Promise.resolve($1)
 endsnippet
 
 # vim:ft=snippets:
