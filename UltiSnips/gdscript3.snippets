@@ -1,8 +1,48 @@
+snippet vr "var" b
+var $1 = $2
+endsnippet
+
+snippet cst "const" b
+const $1 = $2
+endsnippet
+
+snippet v2 "Vector2" w
+Vector2($1, $2)
+endsnippet
+
 snippet fun "func" b
 func $1():
 	$2
 endsnippet
 
+snippet if "if" b
+if $1:
+	$2
+endsnippet
+
+snippet elif "else if" b
+elif $1:
+	$2
+endsnippet
+
+snippet else "else" b
+else:
+	$1
+endsnippet
+
+snippet ret "return" b
+return $1
+endsnippet
+
+snippet prt "print" b
+print($1)
+endsnippet
+
 snippet prtv "print (var)" b
 print("%s " % [$1])
 endsnippet
+
+snippet spl "split" i
+.split("${1: }", false)
+endsnippet
+
