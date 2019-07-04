@@ -142,25 +142,33 @@ ${0}
 endsnippet
 
 
-snippet sub "Subsection"
+snippet sub* "Subsection"
 \subsection{${1:${VISUAL:subsection name}}}%
 \label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
 $0
 endsnippet
 
-snippet sub* "Subsection"
-\subsection*{${1:${VISUAL:subsection name}}}%
-\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+# snippet sub* "Subsection"
+# \subsection*{${1:${VISUAL:subsection name}}}%
+# \label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
-${0}
+# ${0}
+# endsnippet
+
+snippet sub "Subsection"
+\subsection*{${1:${VISUAL:subsection name}}}
 endsnippet
 
-snippet ssub "Subsubsection"
-\subsubsection{${1:${VISUAL:subsubsection name}}}%
-\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+# snippet ssub "Subsubsection"
+# \subsubsection{${1:${VISUAL:subsubsection name}}}%
+# \label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
-$0
+# $0
+# endsnippet
+
+snippet ssub "Subsubsection"
+\subsubsection{${1:${VISUAL:subsubsection name}}}
 endsnippet
 
 snippet ssub* "Subsubsection"
@@ -170,11 +178,15 @@ snippet ssub* "Subsubsection"
 ${0}
 endsnippet
 
-snippet par "Paragraph"
-\paragraph{${1:${VISUAL:paragraph name}}}%
-\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+# snippet par "Paragraph"
+# \paragraph{${1:${VISUAL:paragraph name}}}%
+# \label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
-$0
+# $0
+# endsnippet
+
+snippet par "Paragraph"
+\paragraph{${1:${VISUAL:paragraph name}}}
 endsnippet
 
 snippet subp "Subparagraph"
@@ -231,7 +243,7 @@ snippet sup "Superscript" i
 ${1:var}^{${2:sub}} $0
 endsnippet
 
-snippet sub "Subscript" i
+snippet subsc "Subscript" i
 ${1:var}_{${2:sub}} $0
 endsnippet
 
@@ -245,11 +257,6 @@ endsnippet
 
 snippet ul "Underline" i
 \underline{$1} $0
-endsnippet
-
-snippet pg "Pagebreak" b
-\pagebreak
-$0
 endsnippet
 
 snippet itl "Italics" i
@@ -284,6 +291,16 @@ snippet dispq "displayquote" b
 \begin{displayquote}
 $1
 \end{displayquote}
+endsnippet
+
+snippet ftn "footnote" w
+\footnote{$1}
+endsnippet
+
+snippet code "code snippet" b
+\begin{lstlisting}
+$1
+\end{lstlisting}
 endsnippet
 
 # }}} Custom #

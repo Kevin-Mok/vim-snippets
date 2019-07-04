@@ -8,6 +8,11 @@ snippet nz "if nzxt" b
 {{ end }}
 endsnippet
 
+snippet arch "if arch" b
+{{ if eq .chezmoi.osRelease.id "arch" }}
+{{ end }}
+endsnippet
+
 snippet nro "if not root" b
 {{ if not (eq .chezmoi.username "root") }}
 {{ end }}

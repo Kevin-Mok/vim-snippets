@@ -265,7 +265,7 @@ endglobal
 ########################################
 
 snippet class "class with docstrings" b
-class ${1:MyClass}(${2:object}):
+class ${1:MyClass}:
 
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 
@@ -730,7 +730,7 @@ snippet prf "print (format)" b
 print("$1".format($2))
 endsnippet
 
-snippet forg "Generic for loop" b
+snippet fori "Generic for loop" b
 for i in range($1):
 	$0
 endsnippet
@@ -745,5 +745,9 @@ endsnippet
 
 snippet len "len" i
 len($1)
+endsnippet
+
+snippet app "append" w
+$1.append($2)
 endsnippet
 # }}} Custom #

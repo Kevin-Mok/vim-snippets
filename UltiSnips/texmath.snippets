@@ -17,13 +17,13 @@ snippet eqnn "Equation without a number" b
 \end{equation*}
 endsnippet
 
-snippet al "Align" b
+snippet alin "Align" b
 \begin{align}
 	${0:${VISUAL}}
 \end{align}
 endsnippet
 
-snippet alnn "Align without a number" b
+snippet ali "Align without a number" b
 \begin{align*}
 	${0:${VISUAL}}
 \end{align*}
@@ -85,12 +85,6 @@ snippet lr[ "left[ right]" w
 \left[ ${1:${VISUAL}} \right]
 endsnippet
 
-snippet ali "Align (math)" b
-\begin{align*}
-	$1 &= $2 \\\\
-\end{align*}
-endsnippet
-
 snippet al "Align line" b
 $1&= $2 \\\\
 endsnippet
@@ -133,7 +127,7 @@ snippet ex "cdot" i
 \cdot
 endsnippet
 
-snippet thus "Therefore" b
+snippet thus "Therefore" w
 $\therefore$ 
 endsnippet
 
@@ -141,7 +135,7 @@ snippet rd "Roman d" i
 \mathrm{d}${1:x} $2
 endsnippet
 
-snippet mno "Monospaced font" i
+snippet mn "Monospaced font" i
 \texttt{$1} $2
 endsnippet
 
@@ -207,20 +201,24 @@ snippet ceil "Ceil" i
 \lceil $1 \rceil $0
 endsnippet
 
-snippet lbli "label (item)" w
+snippet lbi "label (item)" w
 \label{itm:$1}
 endsnippet
 
-snippet refi "ref (item)" w
+snippet rfi "ref (item)" w
 \ref{itm:$1}
 endsnippet
 
-snippet lble "label (eq)" w
+snippet lbe "label (eq)" w
 \label{eq:$1}
 endsnippet
 
-snippet refe "ref (eq)" w
+snippet rfe "ref (eq)" w
 \ref{eq:$1}
+endsnippet
+
+snippet rfl "ref (line)" w
+line \ref{line:$1}
 endsnippet
 
 snippet log "log" i
@@ -241,5 +239,9 @@ endsnippet
 
 snippet set "set" w
 \\{$1\\}
+endsnippet
+
+snippet chn "child node" b
+child { node {$1} }
 endsnippet
 # }}} Custom #
