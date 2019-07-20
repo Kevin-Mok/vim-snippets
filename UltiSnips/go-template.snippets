@@ -1,5 +1,10 @@
-snippet lap "if laptop" b
-{{ if eq .chezmoi.fullHostname "x1-carbon" }}
+snippet arch "if arch" b
+{{ if eq .chezmoi.osRelease.id "arch" }}
+{{ end }}
+endsnippet
+
+snippet ntr "if not termux" b
+{{ if not (eq .linux_os "termux") }}
 {{ end }}
 endsnippet
 
@@ -8,12 +13,13 @@ snippet nz "if nzxt" b
 {{ end }}
 endsnippet
 
-snippet arch "if arch" b
-{{ if eq .chezmoi.osRelease.id "arch" }}
+snippet lap "if laptop" b
+{{ if eq .chezmoi.fullHostname "x1-carbon" }}
 {{ end }}
 endsnippet
 
-snippet nro "if not root" b
-{{ if not (eq .chezmoi.username "root") }}
+snippet ngu "if not gui" b
+{{ if not .gui }}
 {{ end }}
 endsnippet
+
