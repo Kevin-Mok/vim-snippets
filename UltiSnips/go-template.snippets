@@ -23,3 +23,13 @@ snippet ngu "if not gui" b
 {{ end }}
 endsnippet
 
+snippet root "if root" b
+{{ if eq .chezmoi.username "root" }}
+{{ end }}
+endsnippet
+
+snippet dbrt "if debian and root" b
+{{ if and (eq .chezmoi.username "root") (eq .linux_os "debian") }}
+{{ end }}
+endsnippet
+
