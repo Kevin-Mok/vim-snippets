@@ -239,6 +239,10 @@ snippet bf "Boldface" i
 \textbf{$1} $2
 endsnippet
 
+snippet tsup "Text superscript" i
+\textsuperscript{$1}
+endsnippet
+
 snippet sup "Superscript" i
 ${1:var}^{${2:sub}} $0
 endsnippet
@@ -301,6 +305,22 @@ snippet code "code snippet" b
 \begin{lstlisting}
 $1
 \end{lstlisting}
+endsnippet
+
+snippet rf "ref" w
+\ref{$1}
+endsnippet
+
+snippet lbi "label (item)" w
+\label{itm:$1}
+endsnippet
+
+snippet rfi "ref (item)" w
+\ref{itm:$1}
+endsnippet
+
+snippet rfl "ref (line)" w
+line \ref{line:$1}
 endsnippet
 
 # }}} Custom #

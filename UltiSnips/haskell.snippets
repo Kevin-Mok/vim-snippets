@@ -3,3 +3,9 @@ priority -50
 snippet impq "Qualified import"
 import qualified ${1:Data.Text} as ${0:`!p snip.rv = t[1].split(".")[-1]`}
 endsnippet
+
+snippet if "if" w
+if $1
+then $2
+else $3
+endsnippet

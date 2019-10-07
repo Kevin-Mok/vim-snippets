@@ -28,27 +28,34 @@ endglobal
 # Sections and Paragraphs #
 ###########################
 snippet h1 "Section" b
-# ${1:Section Name} #
+# ${1:Section Name}
 $0
 endsnippet
 
+snippet htd "Todo header" b
+# To-Do
+- $1
+
+# Done
+endsnippet
+
 snippet h2 "Sub Section" b
-## ${1:Section Name} ##
+## ${1:Section Name}
 $0
 endsnippet
 
 snippet h3 "SubSub Section" b
-### ${1:Section Name} ###
+### ${1:Section Name}
 $0
 endsnippet
 
-snippet par "Paragraph" b
-#### ${1:Paragraph Name} ####
+snippet h4 "Paragraph" b
+#### ${1:Paragraph Name}
 $0
 endsnippet
 
-snippet spar "Paragraph" b
-##### ${1:Paragraph Name} #####
+snippet h5 "Paragraph" b
+##### ${1:Paragraph Name}
 $0
 endsnippet
 
@@ -60,7 +67,7 @@ snippet * "italics"
 *${1:${VISUAL}}*$0
 endsnippet
 
-snippet ** "bold"
+snippet bl "bold" i
 **${1:${VISUAL}}**$0
 endsnippet
 
@@ -109,11 +116,11 @@ endsnippet
 
 # }}} default #
 
-snippet fp "fold pair (HTML)" b
-<!--- $1 {{{ -->
+snippet fp "fold pair (HTML)" i
+<!--- {{{ -->
 
 
-<!--- $1 }}} -->
+<!--- }}} -->
 endsnippet
 
 # vim:ft=snippets:

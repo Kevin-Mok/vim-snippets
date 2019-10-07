@@ -722,8 +722,15 @@ endsnippet
 # }}} Honza #
 
 # Custom {{{ #
+# snippet prt "print" b
+# print($1)
+# endsnippet
 snippet prt "print" b
-print($1)
+print $1
+endsnippet
+
+snippet prte "print (end)" b
+print($1, end="")
 endsnippet
 
 snippet prf "print (format)" b
