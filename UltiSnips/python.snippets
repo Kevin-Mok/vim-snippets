@@ -722,12 +722,12 @@ endsnippet
 # }}} Honza #
 
 # Custom {{{ #
-# snippet prt "print" b
-# print($1)
-# endsnippet
 snippet prt "print" b
-print $1
+print($1)
 endsnippet
+# snippet prt "print" b
+# print $1
+# endsnippet
 
 snippet prte "print (end)" b
 print($1, end="")
@@ -756,5 +756,9 @@ endsnippet
 
 snippet app "append" w
 $1.append($2)
+endsnippet
+
+snippet db "log.debug" b
+log.debug($1)
 endsnippet
 # }}} Custom #

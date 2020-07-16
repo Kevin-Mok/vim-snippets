@@ -32,7 +32,7 @@ snippet h1 "Section" b
 $0
 endsnippet
 
-snippet htd "Todo header" b
+snippet tdh "Todo header" b
 # To-Do
 - $1
 
@@ -79,12 +79,16 @@ endsnippet
 ################
 # Common stuff #
 ################
-snippet lnk "Link to something"
+snippet ln "Link to something"
 [${1:${VISUAL:text}}](${2:url})$0
 endsnippet
 
 snippet img "Image"
 ![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0
+endsnippet
+
+snippet imgh "Image (height)"
+<img src="$1" alt="$2" height="$3"/>
 endsnippet
 
 snippet ilc "Inline Code" i

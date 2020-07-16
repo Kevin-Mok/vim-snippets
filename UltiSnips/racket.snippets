@@ -4,3 +4,18 @@ snippet fp "Fold pair" b
 
 ; $1 }}} ;
 endsnippet
+
+snippet tstm "Test module" b
+(module+ test;{{{;
+  (require rackunit)
+  (test-equal? "$1"
+               ($2)
+			   $3)
+  );}}};
+endsnippet
+
+snippet tst "Single test" b
+(test-equal? "$1"
+             ($2)
+			 $3)
+endsnippet

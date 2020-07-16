@@ -79,7 +79,7 @@ endsnippet
 #########
 # DATES #
 #########
-snippet dt "YYYY-MM-DD" w
+snippet dts "YYYY-MM-DD" w
 `!v strftime("%Y-%m-%d")`
 endsnippet
 
@@ -95,8 +95,8 @@ snippet time "hh:mm" w
 `!v strftime("%H:%M")`
 endsnippet
 
-snippet dtt "YYYY-MM-DD hh:mm" i
-`!v strftime("%Y-%m-%d %H:%M")`
+snippet dt "YYYY-MM-DD hh:mm" i
+(`!v strftime("%Y-%m-%d %H:%M")`)
 endsnippet
 
 # snippet todo "TODO comment" bw
@@ -165,5 +165,35 @@ endsnippet
 
 snippet cb "Code block" b
 \`\`\`
+\`\`\`$0
+endsnippet
+
+snippet cbc "Code block (CSS)" b
+\`\`\`css
+$0
 \`\`\`
 endsnippet
+
+snippet cbg "Code block (Groovy)" b
+\`\`\`groovy
+\`\`\`$0
+endsnippet
+
+snippet cbj "Code block (json)" b
+\`\`\`json
+$0
+\`\`\`
+endsnippet
+
+snippet cbm "Code block (Markdown)" b
+\`\`\`md
+$0
+\`\`\`
+endsnippet
+
+snippet cbp "Code block (Python)" b
+\`\`\`py
+$0
+\`\`\`
+endsnippet
+
