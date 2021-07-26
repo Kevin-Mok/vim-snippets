@@ -39,6 +39,19 @@ snippet tdh "Todo header" b
 # Done
 endsnippet
 
+snippet tdd "Todo day" b
+# $1
+## Morning
+- $2
+
+## Afternoon
+- $3
+
+## Evening
+- $4
+
+endsnippet
+
 snippet h2 "Sub Section" b
 ## ${1:Section Name}
 $0
@@ -125,6 +138,34 @@ snippet fp "fold pair (HTML)" i
 
 
 <!--- }}} -->
+endsnippet
+
+snippet kopr "operator PR template" b
+See: https://issues.redhat.com/browse/KOGITO-$1
+
+## Description
+
+## Testing
+
+## Requirements
+Many thanks for submitting your Pull Request :heart:! 
+
+Please make sure that your PR meets the following requirements:
+
+- [x] You have read the [contributors' guide](https://github.com/kiegroup/kogito-cloud-operator/blob/master/README.md#contributing-to-the-kogito-operator)
+- [x] Pull Request title is properly formatted: `[KOGITO-XYZ] Subject`
+- [x] Pull Request contains link to the JIRA issue
+- [ ] Pull Request contains description of the issue
+- [x] Pull Request does not include fixes for issues other than the main ticket
+- [ ] Your feature/bug fix has a unit test that verifies it
+- [ ] You've tested the new feature/bug fix in an actual OpenShift cluster
+- [ ] You've added a [RELEASE_NOTES.md](RELEASE_NOTES.md) entry regarding this change
+endsnippet
+
+snippet cby "code block (YAML)" b
+\`\`\`yaml
+$1
+\`\`\`
 endsnippet
 
 # vim:ft=snippets:
