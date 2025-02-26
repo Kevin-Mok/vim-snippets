@@ -138,6 +138,14 @@ else {
 }
 endsnippet
 
+snippet json "JSON.stringify" w
+JSON.stringify($1)
+endsnippet
+
+snippet sh "Shell var" w
+${$1}
+endsnippet
+
 snippet switch
 switch`!p snip.rv = keyword_spacing(snip)`(${VISUAL}${1:expression}) {
 	case '${VISUAL}${3:case}':
